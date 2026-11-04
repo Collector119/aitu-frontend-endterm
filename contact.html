@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Astana IT University</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">AIT<span>U</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="campus.html">Campus</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="page-title">
+        <div class="container">
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-lg-5 mb-4">
+                <h2>Address</h2>
+                <address>
+                    Astana IT University<br>
+                    EXPO Business Center, block C1<br>
+                    Mangilik El Avenue 55/11<br>
+                    Astana, Kazakhstan
+                </address>
+                <img class="img-fluid rounded" src="images/open-space.jpg" alt="Open space inside the university building">
+            </div>
+
+            <div class="col-lg-7 mb-4">
+                <h2>Send a Question</h2>
+                <form id="contact-form">
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Full name</label>
+                        <input class="form-control" type="text" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="program">Program</label>
+                        <select class="form-select" id="program" name="program">
+                        <option>Software Engineering</option>
+                        <option>Computer Science</option>
+                        <option>Cybersecurity</option>
+                        <option>Big Data Analysis</option>
+                        <option>Media Technologies</option>
+                        <option>IT Management</option>
+                        <option>Digital Journalism</option>
+                        <option>Industrial Automation</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container text-center">
+        <p>Copyright 2026 Group SE-2530. Midterm project, not the official website of Astana IT University.</p>
+    </div>
+</footer>
+
+</body>
+</html>
