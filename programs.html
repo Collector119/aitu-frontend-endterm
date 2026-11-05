@@ -36,6 +36,27 @@
         <p class="mb-4">AITU offers bachelor programs in information technology, engineering and digital
             media. The table shows the main programs.</p>
 
+        <div class="row">
+            <div class="col-md-8 mb-3">
+                <label class="form-label" for="program-search">Search by name</label>
+                <input class="form-control" type="text" id="program-search">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label" for="field-filter">Field</label>
+                <select class="form-select" id="field-filter">
+                    <option value="all">All fields</option>
+                    <option>Computer science</option>
+                    <option>Information security</option>
+                    <option>Data science</option>
+                    <option>Digital media</option>
+                    <option>Management</option>
+                    <option>Engineering</option>
+                </select>
+            </div>
+        </div>
+
+        <p id="programs-count" class="programs-count"></p>
+
         <div class="table-responsive">
             <table class="table table-striped table-bordered programs-table">
                 <thead>
@@ -49,6 +70,7 @@
                 <tbody id="programs-body"></tbody>
             </table>
         </div>
+        <p id="no-results" class="no-results">No programs match your search.</p>
 
         <h2 class="text-center mt-5 mb-4">Popular Programs</h2>
         <div class="row">

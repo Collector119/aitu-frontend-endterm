@@ -158,6 +158,17 @@ a {
     color: #ffffff;
 }
 
+.programs-count {
+    color: #5a6684;
+}
+
+.no-results {
+    display: none;
+    background-color: #fff4d6;
+    border-left: 6px solid #f2b705;
+    padding: 12px 16px;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
