@@ -9,16 +9,44 @@ const programs = [
     { name: "Industrial Automation", field: "Engineering", duration: "3 years", language: "English" }
 ];
 
+const favorites = [];
+
 const tableBody = document.querySelector("#programs-body");
 const searchInput = document.querySelector("#program-search");
 const fieldSelect = document.querySelector("#field-filter");
 const countText = document.querySelector("#programs-count");
 const noResults = document.querySelector("#no-results");
+const favoritesList = document.querySelector("#favorites-list");
+const favoritesEmpty = document.querySelector("#favorites-empty");
 
 function createCell(text) {
     const cell = document.createElement("td");
     cell.textContent = text;
     return cell;
+}
+
+function isFavorite(name) {
+    return favorites.includes(name);
+}
+
+function createFavoriteButton(program) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "btn btn-sm favorite-btn";
+    if (isFavorite(program.name)) {
+        button.textContent = "Saved";
+        button.classList.add("saved");
+    } else {
+        button.textContent = "Save";
+    }
+    button.addEventListener("click", function () {
+        if (isFavorite(program.name)) {
+            removeFavorite(program.name);
+        } else {
+            addFavorite(program.name);
+        }
+    });
+    return button;
 }
 
 function createProgramRow(program) {
@@ -27,6 +55,9 @@ function createProgramRow(program) {
     row.appendChild(createCell(program.field));
     row.appendChild(createCell(program.duration));
     row.appendChild(createCell(program.language));
+    const buttonCell = document.createElement("td");
+    buttonCell.appendChild(createFavoriteButton(program));
+    row.appendChild(buttonCell);
     return row;
 }
 
@@ -60,6 +91,43 @@ function showFilteredPrograms() {
     } else {
         noResults.style.display = "none";
     }
+}
+
+function addFavorite(name) {
+    favorites.push(name);
+
+    const item = document.createElement("li");
+    item.setAttribute("data-name", name);
+    item.textContent = name + " ";
+
+    const removeButton = document.createElement("button");
+    removeButton.type = "button";
+    removeButton.className = "btn btn-sm btn-outline-danger";
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener("click", function () {
+        removeFavorite(name);
+    });
+
+    item.appendChild(removeButton);
+    favoritesList.appendChild(item);
+    updateFavoritesView();
+}
+
+function removeFavorite(name) {
+    favorites.splice(favorites.indexOf(name), 1);
+    const item = favoritesList.querySelector('[data-name="' + name + '"]');
+    item.remove();
+    updateFavoritesView();
+}
+
+// The table is drawn again so that the Save / Saved buttons match the favorites array
+function updateFavoritesView() {
+    if (favorites.length === 0) {
+        favoritesEmpty.style.display = "block";
+    } else {
+        favoritesEmpty.style.display = "none";
+    }
+    showFilteredPrograms();
 }
 
 searchInput.addEventListener("input", showFilteredPrograms);
