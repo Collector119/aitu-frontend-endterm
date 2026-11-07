@@ -60,6 +60,19 @@ a {
     color: #f2b705;
 }
 
+.theme-btn {
+    background-color: transparent;
+    border: 1px solid #f2b705;
+    border-radius: 6px;
+    color: #f2b705;
+    padding: 4px 12px;
+}
+
+.theme-btn:hover {
+    background-color: #f2b705;
+    color: #1c2541;
+}
+
 .hero {
     position: relative;
     height: 480px;
@@ -239,6 +252,60 @@ a {
 
 .site-footer p {
     margin: 0;
+}
+
+body.dark-theme {
+    background-color: #10172e;
+    color: #e3e8f4;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+    color: #ffffff;
+}
+
+.dark-theme main li a {
+    color: #f2b705;
+}
+
+.dark-theme .info-card,
+.dark-theme #mission,
+.dark-theme #contact-form,
+.dark-theme .favorites-list li {
+    background-color: #1c2541;
+    border-color: #2e3a5c;
+}
+
+.dark-theme .programs-table td {
+    background-color: #1c2541;
+    border-color: #2e3a5c;
+    box-shadow: none;
+    color: #e3e8f4;
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: #10172e;
+    border-color: #2e3a5c;
+    color: #e3e8f4;
+}
+
+.dark-theme .programs-count {
+    color: #aab4cc;
+}
+
+.dark-theme .no-results {
+    background-color: #2e3a5c;
+}
+
+.dark-theme .favorite-btn {
+    border-color: #f2b705;
+    color: #f2b705;
+}
+
+.dark-theme .favorite-btn.saved {
+    color: #1c2541;
 }
 
 @media (max-width: 992px) {
