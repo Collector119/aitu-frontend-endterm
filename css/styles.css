@@ -207,6 +207,20 @@ a {
     padding: 8px 16px;
 }
 
+.filter-btn {
+    background-color: #ffffff;
+    border: 1px solid #0b2a6f;
+    border-radius: 20px;
+    color: #0b2a6f;
+    margin: 0 8px 8px 0;
+    padding: 6px 16px;
+}
+
+.filter-btn.active {
+    background-color: #0b2a6f;
+    color: #ffffff;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -305,6 +319,17 @@ body.dark-theme {
     background-color: #10172e;
     border-color: #2e3a5c;
     color: #e3e8f4;
+}
+
+.dark-theme .filter-btn {
+    background-color: #1c2541;
+    border-color: #f2b705;
+    color: #f2b705;
+}
+
+.dark-theme .filter-btn.active {
+    background-color: #f2b705;
+    color: #1c2541;
 }
 
 .dark-theme .error-message {
