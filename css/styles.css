@@ -166,6 +166,32 @@ a {
     padding: 24px;
 }
 
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid #d8deeb;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.faq-question {
+    background-color: transparent;
+    border: none;
+    color: #0b2a6f;
+    font-weight: bold;
+    padding: 14px 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.faq-item.open .faq-question {
+    color: #d9a404;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 4px;
+}
+
 .programs-table th {
     background-color: #0b2a6f;
     color: #ffffff;
@@ -300,6 +326,7 @@ body.dark-theme {
 }
 
 .dark-theme .info-card,
+.dark-theme .faq-item,
 .dark-theme #mission,
 .dark-theme #contact-form,
 .dark-theme .favorites-list li {
@@ -319,6 +346,14 @@ body.dark-theme {
     background-color: #10172e;
     border-color: #2e3a5c;
     color: #e3e8f4;
+}
+
+.dark-theme .faq-question {
+    color: #ffffff;
+}
+
+.dark-theme .faq-item.open .faq-question {
+    color: #f2b705;
 }
 
 .dark-theme .filter-btn {
