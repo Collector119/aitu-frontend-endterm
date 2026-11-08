@@ -49,18 +49,21 @@
 
             <div class="col-lg-7 mb-4">
                 <h2>Send a Question</h2>
-                <form id="contact-form">
+                <form id="contact-form" novalidate>
                     <div class="mb-3">
                         <label class="form-label" for="name">Full name</label>
-                        <input class="form-control" type="text" id="name" name="name" required>
+                        <input class="form-control" type="text" id="name" name="name">
+                        <div class="error-message" id="name-error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="email">Email</label>
-                        <input class="form-control" type="email" id="email" name="email" required>
+                        <input class="form-control" type="email" id="email" name="email">
+                        <div class="error-message" id="email-error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="program">Program</label>
                         <select class="form-select" id="program" name="program">
+                        <option value="">Choose a program</option>
                         <option>Software Engineering</option>
                         <option>Computer Science</option>
                         <option>Cybersecurity</option>
@@ -70,13 +73,21 @@
                         <option>Digital Journalism</option>
                         <option>Industrial Automation</option>
                         </select>
+                        <div class="error-message" id="program-error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="message">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                        <div class="error-message" id="message-error"></div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input class="form-check-input" type="checkbox" id="agree" name="agree">
+                        <label class="form-check-label" for="agree">I agree that the university can answer me by email</label>
+                        <div class="error-message" id="agree-error"></div>
                     </div>
                     <button class="btn btn-primary" type="submit">Send</button>
                 </form>
+                <div class="form-success mt-3" id="form-success"></div>
             </div>
         </div>
     </section>
@@ -90,6 +101,7 @@
 </footer>
 
 <script src="js/theme.js"></script>
+<script src="js/contact.js"></script>
 
 </body>
 </html>

@@ -244,6 +244,22 @@ a {
     padding: 24px;
 }
 
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.form-success {
+    display: none;
+    background-color: #d1f2dc;
+    border-left: 6px solid #198754;
+    border-radius: 8px;
+    color: #0f5132;
+    font-weight: bold;
+    padding: 16px;
+}
+
 .site-footer {
     background-color: #1c2541;
     color: #c9d1e3;
@@ -289,6 +305,10 @@ body.dark-theme {
     background-color: #10172e;
     border-color: #2e3a5c;
     color: #e3e8f4;
+}
+
+.dark-theme .error-message {
+    color: #ff8a95;
 }
 
 .dark-theme .programs-count {
